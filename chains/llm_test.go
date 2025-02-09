@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/llms/googleai"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/prompts"
+	"github.com/iamalsaher/langchaingo/callbacks"
+	"github.com/iamalsaher/langchaingo/llms/googleai"
+	"github.com/iamalsaher/langchaingo/llms/openai"
+	"github.com/iamalsaher/langchaingo/prompts"
 )
 
 func TestLLMChain(t *testing.T) {

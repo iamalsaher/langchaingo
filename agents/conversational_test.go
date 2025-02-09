@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/chains"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/memory"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/iamalsaher/langchaingo/chains"
+	"github.com/iamalsaher/langchaingo/llms/openai"
+	"github.com/iamalsaher/langchaingo/memory"
+	"github.com/iamalsaher/langchaingo/tools"
 )
 
 func TestConversationalWithMemory(t *testing.T) {

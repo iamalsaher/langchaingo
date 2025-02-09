@@ -6,9 +6,9 @@ import (
 	"github.com/getzep/zep-go"
 	zepClient "github.com/getzep/zep-go/client"
 	zepOption "github.com/getzep/zep-go/option"
-	"github.com/tmc/langchaingo/chains"
-	"github.com/tmc/langchaingo/llms/openai"
-	zepLangchainMemory "github.com/tmc/langchaingo/memory/zep"
+	"github.com/iamalsaher/langchaingo/chains"
+	"github.com/iamalsaher/langchaingo/llms/openai"
+	zepLangchainMemory "github.com/iamalsaher/langchaingo/memory/zep"
 	"os"
 )
 

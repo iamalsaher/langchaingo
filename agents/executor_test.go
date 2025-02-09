@@ -7,13 +7,13 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/agents"
-	"github.com/tmc/langchaingo/chains"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/tools"
-	"github.com/tmc/langchaingo/tools/serpapi"
+	"github.com/iamalsaher/langchaingo/agents"
+	"github.com/iamalsaher/langchaingo/chains"
+	"github.com/iamalsaher/langchaingo/llms/openai"
+	"github.com/iamalsaher/langchaingo/prompts"
+	"github.com/iamalsaher/langchaingo/schema"
+	"github.com/iamalsaher/langchaingo/tools"
+	"github.com/iamalsaher/langchaingo/tools/serpapi"
 )
 
 type testAgent struct {

@@ -5,11 +5,11 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/tmc/langchaingo/chains"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/memory"
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/schema"
+	"github.com/iamalsaher/langchaingo/chains"
+	"github.com/iamalsaher/langchaingo/llms"
+	"github.com/iamalsaher/langchaingo/memory"
+	"github.com/iamalsaher/langchaingo/prompts"
+	"github.com/iamalsaher/langchaingo/schema"
 )
 
 var (

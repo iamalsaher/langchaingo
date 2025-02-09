@@ -18,10 +18,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/embeddings"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/googleai"
-	"github.com/tmc/langchaingo/llms/googleai/vertex"
+	"github.com/iamalsaher/langchaingo/embeddings"
+	"github.com/iamalsaher/langchaingo/llms"
+	"github.com/iamalsaher/langchaingo/llms/googleai"
+	"github.com/iamalsaher/langchaingo/llms/googleai/vertex"
 )
 
 func newGoogleAIClient(t *testing.T, opts ...googleai.Option) *googleai.GoogleAI {

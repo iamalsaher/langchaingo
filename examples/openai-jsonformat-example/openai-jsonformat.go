@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/openai"
+	"github.com/iamalsaher/langchaingo/llms"
+	"github.com/iamalsaher/langchaingo/llms/openai"
 	"log"
 )
 

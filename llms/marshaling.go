@@ -161,16 +161,33 @@ func (iuc *ImageURLContent) UnmarshalJSON(data []byte) error {
 }
 
 func (bc BinaryContent) MarshalJSON() ([]byte, error) {
-	m := struct {
-		Type   string            `json:"type"`
-		Binary map[string]string `json:"binary"`
-	}{
-		Type: bc.dataType,
-		Binary: map[string]string{
-			"mime_type": bc.MIMEType,
-			"data":      base64.StdEncoding.EncodeToString(bc.Data),
-		},
+	var m any
+
+	switch bc.dataType {
+	default:
+		m = struct {
+			Type   string            `json:"type"`
+			Binary map[string]string `json:"binary"`
+		}{
+			Type: bc.dataType,
+			Binary: map[string]string{
+				"mime_type": bc.MIMEType,
+				"data":      base64.StdEncoding.EncodeToString(bc.Data),
+			},
+		}
+	case "file":
+		m = struct {
+			Type string            `json:"type"`
+			File map[string]string `json:"file"`
+		}{
+			Type: bc.dataType,
+			File: map[string]string{
+				"mime_type": bc.MIMEType,
+				"data":      base64.StdEncoding.EncodeToString(bc.Data),
+			},
+		}
 	}
+
 	return json.Marshal(m)
 }
 
@@ -179,10 +196,17 @@ func (bc *BinaryContent) UnmarshalJSON(data []byte) error {
 	if err := json.Unmarshal(data, &m); err != nil {
 		return err
 	}
-	if m["type"] != "binary" {
+
+	switch m["type"] {
+	case "binary", "file":
+	default:
 		return fmt.Errorf("invalid type for BinaryContent: %v", m["type"])
 	}
-	binary, ok := m["binary"].(map[string]interface{})
+
+	val := m["type"].(string)
+	bc.dataType = val
+
+	binary, ok := m[val].(map[string]interface{})
 	if !ok {
 		return fmt.Errorf("invalid binary field in BinaryContent")
 	}
